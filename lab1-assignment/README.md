@@ -85,4 +85,4 @@ I chose timeout = 1.0 s and 3 consecutive failures.
 
 - Gain: transient failures do not trigger a false DOWN alarm.
 - Cost: detection takes about 6 s (worst case 9 s) instead of 2 s.
-'@ | Set-Content -Path README.md -Encoding UTF8
+
