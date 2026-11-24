@@ -1,4 +1,3 @@
-﻿"""A copy of the service whose /health always waits 0.8 seconds."""
 import time
 from fastapi import FastAPI
 
