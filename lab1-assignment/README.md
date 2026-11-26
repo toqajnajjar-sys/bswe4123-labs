@@ -1,4 +1,4 @@
-﻿# Lab Assignment 1 — Is the Service Up, Slow or Down?
+# Lab Assignment 1 — Is the Service Up, Slow or Down?
 
 This folder contains `service.py` (with `/health`), `monitor.py`
 (checks three services every 2 s), and `service_slow.py` (a slow copy
@@ -68,6 +68,7 @@ Monitoring 3 services every 2.0s (timeout=1.0s, slow threshold=500 ms)
 [16:38:43] round 60: service-8001=UP (9 ms) | service-8002=UP (6 ms) | service-8003=UP (11 ms)
 
 
+
 ### Explanation of changes
 
 All three services stayed UP during the recorded minute because none
@@ -77,10 +78,3 @@ below the 500 ms threshold.
 - If a service is stopped: the monitor prints DOWN (or SUSPECT(1/3)).
 - If a service is slow (0.8 s): it prints SLOW (~804 ms).
 - When restarted: it goes back to UP.
-
-## Step 4 — Timeout and failure threshold
-
-I chose timeout = 1.0 s and 3 consecutive failures.
-
-- Gain: transient failures do not trigger a false DOWN alarm.
-- Cost: detection takes about 6 s (worst case 9 s) instead of 2 s.

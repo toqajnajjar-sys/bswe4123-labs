@@ -1,4 +1,3 @@
-﻿"""Lab 1 Assignment - monitor with a consecutive-failure threshold."""
 import time
 import urllib.error
 import urllib.request
